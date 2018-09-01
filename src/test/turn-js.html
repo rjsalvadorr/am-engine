@@ -14,6 +14,17 @@
         .flipbook-page.hard {
             background-color: #cccccc;
         }
+        .flipbook-page.verso,
+        .flipbook-page.recto {
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .flipbook-page.verso {
+            background-image: url("img/Monster_PG_BG_L.png");
+        }
+        .flipbook-page.recto {
+            background-image: url("img/Monster_PG_BG_R.png");
+        }
         .book-area {
             padding: 20px;
         }
@@ -28,10 +39,14 @@
             <div id="flipbook">
                 <div class="flipbook-page hard">Turn.js</div>
                 <div class="flipbook-page hard"></div>
-                <div class="flipbook-page">Page 1</div>
-                <div class="flipbook-page">Page 2</div>
-                <div class="flipbook-page">Page 3</div>
-                <div class="flipbook-page">Page 4</div>
+                <div class="flipbook-page recto">Page 1</div>
+                <div class="flipbook-page verso">Page 2</div>
+                <div class="flipbook-page recto">Page 3</div>
+                <div class="flipbook-page verso">Page 4</div>
+                <div class="flipbook-page recto">Page 3</div>
+                <div class="flipbook-page verso">Page 4</div>
+                <div class="flipbook-page recto">Page 3</div>
+                <div class="flipbook-page verso">Page 4</div>
                 <div class="flipbook-page hard"></div>
                 <div class="flipbook-page hard"></div>
             </div>
@@ -45,8 +60,8 @@
     <script src="turnjs/turn.js"></script>
     <script type="text/javascript">
         $("#flipbook").turn({
-            width: 400,
-            height: 300,
+            width: 800,
+            height: 600,
             autoCenter: true
         });
     </script>
