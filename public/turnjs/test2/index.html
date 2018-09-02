@@ -3,32 +3,7 @@
 <head> 
     <meta charset="UTF-8" />
     <title>Bestiary Test One</title>
-    <style type="text/css">
-        body {
-            margin: 0;
-        }
-        .flipbook-page {
-            text-align: center;
-            background-color: #eeeeee;
-        }
-        .flipbook-page.hard {
-            background-color: #cccccc;
-        }
-        .flipbook-page.verso,
-        .flipbook-page.recto {
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-        .flipbook-page.verso {
-            background-image: url("img/Monster_PG_BG_L.png");
-        }
-        .flipbook-page.recto {
-            background-image: url("img/Monster_PG_BG_R.png");
-        }
-        .book-area {
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <header>
@@ -37,16 +12,26 @@
     <main>
         <div class="book-area">
             <div id="flipbook">
-                <div class="flipbook-page hard">Turn.js</div>
+                <div class="flipbook-page hard">
+                    <h1 class="front-title">Inner Bestiary</h1>
+                </div>
                 <div class="flipbook-page hard"></div>
-                <div class="flipbook-page recto">Page 1</div>
+
+                <div class="flipbook-page recto">
+                    <h1>Preface</h1>
+                </div>
+
                 <div class="flipbook-page verso">Page 2</div>
                 <div class="flipbook-page recto">Page 3</div>
+
                 <div class="flipbook-page verso">Page 4</div>
                 <div class="flipbook-page recto">Page 3</div>
+
                 <div class="flipbook-page verso">Page 4</div>
                 <div class="flipbook-page recto">Page 3</div>
+
                 <div class="flipbook-page verso">Page 4</div>
+
                 <div class="flipbook-page hard"></div>
                 <div class="flipbook-page hard"></div>
             </div>
@@ -56,8 +41,8 @@
         Copyright Askal Mediaworks, 2018
     </footer>
 
-    <script src="jquery-1.12.4.min.js"></script>
-    <script src="turnjs/turn.js"></script>
+    <script src="../lib/jquery-1.12.4.min.js"></script>
+    <script src="../lib/turn.js"></script>
     <script type="text/javascript">
         $("#flipbook").turn({
             width: 800,

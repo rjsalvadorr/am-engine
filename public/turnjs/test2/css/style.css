@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+}
+.flipbook-page {
+  text-align: center;
+  background-color: #eeeeee;
+}
+.flipbook-page.hard {
+  background-color: #cccccc;
+}
+.flipbook-page.verso,
+.flipbook-page.recto {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.flipbook-page.verso {
+  background-image: url("../img/Monster_PG_BG_L.png");
+}
+.flipbook-page.recto {
+  background-image: url("../img/Monster_PG_BG_R.png");
+}
+.book-area {
+  padding: 20px;
+}
